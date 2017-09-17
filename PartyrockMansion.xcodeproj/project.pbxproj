@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		DE0AB5961F67F38D0002F058 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0AB5951F67F38D0002F058 /* AppDelegate.swift */; };
-		DE0AB5981F67F38D0002F058 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0AB5971F67F38D0002F058 /* ViewController.swift */; };
+		DE0AB5981F67F38D0002F058 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0AB5971F67F38D0002F058 /* MainVC.swift */; };
 		DE0AB59B1F67F38D0002F058 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE0AB5991F67F38D0002F058 /* Main.storyboard */; };
 		DE0AB59D1F67F38D0002F058 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE0AB59C1F67F38D0002F058 /* Assets.xcassets */; };
 		DE0AB5A01F67F38D0002F058 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE0AB59E1F67F38D0002F058 /* LaunchScreen.storyboard */; };
+		DE8D183F1F6DFBC400B14294 /* Just tell me what regular (Version 2).otf in Resources */ = {isa = PBXBuildFile; fileRef = DE8D183E1F6DFBC400B14294 /* Just tell me what regular (Version 2).otf */; };
+		DE8D18421F6DFE7B00B14294 /* VideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8D18411F6DFE7B00B14294 /* VideoVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DE0AB5921F67F38D0002F058 /* PartyrockMansion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyrockMansion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE0AB5951F67F38D0002F058 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DE0AB5971F67F38D0002F058 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DE0AB5971F67F38D0002F058 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		DE0AB59A1F67F38D0002F058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE0AB59C1F67F38D0002F058 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE0AB59F1F67F38D0002F058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE0AB5A11F67F38D0002F058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE8D183E1F6DFBC400B14294 /* Just tell me what regular (Version 2).otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Just tell me what regular (Version 2).otf"; sourceTree = "<group>"; };
+		DE8D18411F6DFE7B00B14294 /* VideoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,48 @@
 		DE0AB5941F67F38D0002F058 /* PartyrockMansion */ = {
 			isa = PBXGroup;
 			children = (
+				DE8D18401F6DFBD900B14294 /* Files */,
+				DE8D183D1F6DEE4600B14294 /* Model */,
+				DE8D183C1F6DEE3300B14294 /* View */,
+				DE8D183B1F6DEDC300B14294 /* Controller */,
 				DE0AB5951F67F38D0002F058 /* AppDelegate.swift */,
-				DE0AB5971F67F38D0002F058 /* ViewController.swift */,
 				DE0AB5991F67F38D0002F058 /* Main.storyboard */,
-				DE0AB59C1F67F38D0002F058 /* Assets.xcassets */,
 				DE0AB59E1F67F38D0002F058 /* LaunchScreen.storyboard */,
+				DE0AB59C1F67F38D0002F058 /* Assets.xcassets */,
 				DE0AB5A11F67F38D0002F058 /* Info.plist */,
 			);
 			path = PartyrockMansion;
+			sourceTree = "<group>";
+		};
+		DE8D183B1F6DEDC300B14294 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DE0AB5971F67F38D0002F058 /* MainVC.swift */,
+				DE8D18411F6DFE7B00B14294 /* VideoVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		DE8D183C1F6DEE3300B14294 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		DE8D183D1F6DEE4600B14294 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DE8D18401F6DFBD900B14294 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				DE8D183E1F6DFBC400B14294 /* Just tell me what regular (Version 2).otf */,
+			);
+			name = Files;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +160,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE8D183F1F6DFBC400B14294 /* Just tell me what regular (Version 2).otf in Resources */,
 				DE0AB5A01F67F38D0002F058 /* LaunchScreen.storyboard in Resources */,
 				DE0AB59D1F67F38D0002F058 /* Assets.xcassets in Resources */,
 				DE0AB59B1F67F38D0002F058 /* Main.storyboard in Resources */,
@@ -135,7 +174,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE0AB5981F67F38D0002F058 /* ViewController.swift in Sources */,
+				DE8D18421F6DFE7B00B14294 /* VideoVC.swift in Sources */,
+				DE0AB5981F67F38D0002F058 /* MainVC.swift in Sources */,
 				DE0AB5961F67F38D0002F058 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +328,7 @@
 				DE0AB5A61F67F38D0002F058 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
