@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -23,7 +24,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partybanner" translatesAutoresizingMaskIntoConstraints="NO" id="wvQ-Tn-Xnd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="partybanner" translatesAutoresizingMaskIntoConstraints="NO" id="wvQ-Tn-Xnd">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="148"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="196" id="0he-pX-a2Q">
@@ -106,10 +107,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="97" id="42J-zG-Hnq">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PartyCell" rowHeight="97" id="42J-zG-Hnq" customClass="PartyCell" customModule="PartyrockMansion" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="42J-zG-Hnq" id="CHh-cK-Jc8">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="96"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partybanner" translatesAutoresizingMaskIntoConstraints="NO" id="uKl-WB-LOm">
@@ -137,7 +139,7 @@
                                                         <constraint firstAttribute="height" constant="52" id="3Cc-sg-5di"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Justtellmewhat" family="Just tell me what" pointSize="25"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -165,11 +167,11 @@
                                                     <exclude reference="b2l-yB-Oig"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="Nmg-Yv-XvO"/>
-                                                    <exclude reference="TQb-lf-hkj"/>
                                                     <exclude reference="PbF-21-2SY"/>
                                                     <exclude reference="Rbq-eV-Rsk"/>
                                                     <exclude reference="kyc-NK-R4F"/>
+                                                    <exclude reference="Nmg-Yv-XvO"/>
+                                                    <exclude reference="TQb-lf-hkj"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -178,19 +180,24 @@
                                                     <include reference="b2l-yB-Oig"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="Nmg-Yv-XvO"/>
-                                                    <include reference="TQb-lf-hkj"/>
                                                     <include reference="PbF-21-2SY"/>
                                                     <include reference="Rbq-eV-Rsk"/>
                                                     <include reference="kyc-NK-R4F"/>
+                                                    <include reference="Nmg-Yv-XvO"/>
+                                                    <include reference="TQb-lf-hkj"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="VideoPreviewImage" destination="uKl-WB-LOm" id="oQG-oK-7I4"/>
+                                            <outlet property="videoTitle" destination="b2l-yB-Oig" id="fjm-IH-C7u"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Bte-vT-Rdc">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bte-vT-Rdc" id="fm1-cv-Ied">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="96"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -198,6 +205,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p6e-th-KBI" id="mlU-nk-NaL">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="96"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -229,15 +237,15 @@
                                 <exclude reference="vy7-Ag-U8c"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="97Q-Dn-g3d"/>
-                                <exclude reference="Yzy-cK-XfQ"/>
-                                <exclude reference="ZK5-gE-c2S"/>
                                 <exclude reference="JmK-Gk-OWi"/>
                                 <exclude reference="Zef-Lf-hev"/>
                                 <exclude reference="q5P-Qv-YD4"/>
                                 <exclude reference="6GD-y5-oz5"/>
                                 <exclude reference="jE7-Fd-kNR"/>
                                 <exclude reference="usy-CB-CAo"/>
+                                <exclude reference="97Q-Dn-g3d"/>
+                                <exclude reference="Yzy-cK-XfQ"/>
+                                <exclude reference="ZK5-gE-c2S"/>
                                 <exclude reference="KA5-zF-znR"/>
                             </mask>
                         </variation>
@@ -247,15 +255,15 @@
                                 <include reference="vy7-Ag-U8c"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="97Q-Dn-g3d"/>
-                                <include reference="Yzy-cK-XfQ"/>
-                                <include reference="ZK5-gE-c2S"/>
                                 <include reference="JmK-Gk-OWi"/>
                                 <include reference="Zef-Lf-hev"/>
                                 <include reference="q5P-Qv-YD4"/>
                                 <include reference="6GD-y5-oz5"/>
                                 <include reference="jE7-Fd-kNR"/>
                                 <include reference="usy-CB-CAo"/>
+                                <include reference="97Q-Dn-g3d"/>
+                                <include reference="Yzy-cK-XfQ"/>
+                                <include reference="ZK5-gE-c2S"/>
                                 <include reference="KA5-zF-znR"/>
                             </mask>
                         </variation>
@@ -277,6 +285,7 @@
                         <viewControllerLayoutGuide type="bottom" id="iGC-00-9gc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DmL-Hv-kGy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RsB-du-Mfr">
@@ -297,7 +306,7 @@
                                 </variation>
                             </webView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="RsB-du-Mfr" firstAttribute="top" secondItem="DmL-Hv-kGy" secondAttribute="topMargin" id="2C8-Cy-JIE"/>
                             <constraint firstItem="RsB-du-Mfr" firstAttribute="leading" secondItem="DmL-Hv-kGy" secondAttribute="leadingMargin" constant="-20" id="arK-Gn-IdZ"/>
