@@ -14,8 +14,8 @@ import UIKit
 
 class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var tableView: UITableView!
     
     
     var partyRocks = [PartyRock]()
@@ -23,6 +23,11 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let p1 = PartyRock(imageURL: "https://i.ytimg.com/vi/nfWlot6h_JM/maxresdefault.jpg", videoURL: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/nfWlot6h_JM\" frameborder=\"0\" allowfullscreen></iframe>", videoTitle: "Shake it off")
+        
+        partyRocks.append(p1)
+        
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -54,4 +59,6 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
 
 }
+
+
 
