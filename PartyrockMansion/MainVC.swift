@@ -26,7 +26,11 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         let p1 = PartyRock(imageURL: "https://i.ytimg.com/vi/nfWlot6h_JM/maxresdefault.jpg", videoURL: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/nfWlot6h_JM\" frameborder=\"0\" allowfullscreen></iframe>", videoTitle: "Shake it off")
         
+        let p2 = PartyRock(imageURL: "https://i.ytimg.com/vi/lp-EO5I60KA/maxresdefault.jpg",videoURL: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/lp-EO5I60KA\" frameborder=\"0\" allowfullscreen></iframe>", videoTitle: "Thinking out loud")
+        
+        
         partyRocks.append(p1)
+        partyRocks.append(p2)
         
         
         tableView.delegate = self
@@ -55,7 +59,24 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return partyRocks.count
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let partyRock = partyRocks[indexPath.row]
+        
+        performSegueWithIdentifier("VideoVC", sender: partyRock)
+        
+    }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if let destination = segue.destinationViewController as? VideoVC {
+            
+            if let party = sender as? PartyRock{
+                destination.partyRock = party
+                
+            }
+        }
+    }
 
 
 }

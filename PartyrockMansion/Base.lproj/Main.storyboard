@@ -8,6 +8,7 @@
     <customFonts key="customFonts">
         <mutableArray key="Just tell me what regular (Version 2).otf">
             <string>Justtellmewhat</string>
+            <string>Justtellmewhat</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -172,14 +173,30 @@
                                     <constraint firstAttribute="height" constant="306" id="5AN-Im-t9u"/>
                                 </constraints>
                             </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIJ-ku-vFg">
+                                <rect key="frame" x="86" y="356" width="428" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="40V-Be-bV3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Justtellmewhat" family="Just tell me what" pointSize="33"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="pIJ-ku-vFg" firstAttribute="leading" secondItem="DmL-Hv-kGy" secondAttribute="leadingMargin" constant="66" id="CgB-YX-SiM"/>
                             <constraint firstItem="6Vj-ks-asC" firstAttribute="top" secondItem="DmL-Hv-kGy" secondAttribute="topMargin" id="liE-oV-fiw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6Vj-ks-asC" secondAttribute="trailing" constant="-20" id="rDN-L2-iR8"/>
+                            <constraint firstItem="pIJ-ku-vFg" firstAttribute="top" secondItem="6Vj-ks-asC" secondAttribute="bottom" constant="50" id="rTN-bi-GaB"/>
                             <constraint firstItem="6Vj-ks-asC" firstAttribute="leading" secondItem="DmL-Hv-kGy" secondAttribute="leadingMargin" constant="-20" id="sKW-9O-fE6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pIJ-ku-vFg" secondAttribute="trailing" constant="66" id="uN5-8Y-4aX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="titleLbl" destination="pIJ-ku-vFg" id="ICg-j6-2sk"/>
+                        <outlet property="webView" destination="6Vj-ks-asC" id="T7B-Yv-yX0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BrA-2o-NWv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
